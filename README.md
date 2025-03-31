@@ -13,7 +13,7 @@ Before running the application, it is recommended to create a virtual environmen
 ```python -m venv /path/to/new/virtual/environment```
 
 ### Activate the virtual environment
-venv\Scripts\activate
+```venv\Scripts\activate```
 
 ### Install dependencies
 ```pip install -r requirements.txt```
