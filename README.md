@@ -15,7 +15,8 @@ Before running the application, it is recommended to create a virtual environmen
 ### Creating .env file
 In the root directory of this repo, create a .env file and insert your secrets into the below:
 ```GEMINI_API_KEY = "Your Gemini API Key"
-TAVILY_API_KEY = "Your Tavily API key" ```
+TAVILY_API_KEY = "Your Tavily API key"
+ ```
 
 ### Activate the virtual environment
 ```venv\Scripts\activate```
