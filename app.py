@@ -16,9 +16,7 @@ from sentence_transformers import SentenceTransformer
 import concurrent.futures
 from typing import List, Dict, Any
 import numpy as np
-
 load_dotenv()
-
 
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
@@ -103,8 +101,7 @@ class ResearchOrchestrator:
                     if 'content' in article:
                         article['content'] = article['content'][:10000]  
                 
-                articles = self._filter_articles(articles)
-                
+                articles = self._filter_articles(articles)    
                 
                 if sort_by == "Latest":
                     articles.sort(key=lambda x: x.get("published_date", ""), reverse=True)
@@ -185,7 +182,6 @@ class ResearchOrchestrator:
                 summary_embed = self.embedder.encode(summary).reshape(1, -1)
                 content_embed = self.embedder.encode(content).reshape(1, -1)
                 similarity = cosine_similarity(summary_embed, content_embed)[0][0]
-                
                 rouge_scores = self.scorer.score(summary, content[:5000])
                 
                 return {
