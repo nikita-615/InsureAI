@@ -10,7 +10,9 @@ An AI-powered research assistant specializing in climate-related insurance risks
 
 ### Create virtual environment
 Before running the application, it is recommended to create a virtual environment. (Note: These are steps for venv in python , to create venv in conda there would be different steps.)
-```python -m venv /path/to/new/virtual/environment```
+```
+python -m venv /path/to/new/virtual/environment
+```
 
 ### Creating .env file
 In the root directory of this repo, create a .env file and insert your secrets into the below:
